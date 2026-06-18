@@ -1,0 +1,44 @@
+#In multi-agent projects, a file like policies.
+#yaml is usually used to define system rules or orchestration policies,
+access_control:
+  employee:
+    can_view_self_data: true
+    can_view_other_employee_data: false
+    can_view_policy_documents: true
+
+  manager:
+    can_view_self_data: true
+    can_view_other_employee_data: limited
+    can_view_policy_documents: true
+
+  hr:
+    can_view_self_data: true
+    can_view_other_employee_data: true
+    can_view_policy_documents: true
+
+routing:
+  policy_query:
+    target_agents:
+      - PolicyRAGAgent
+
+  employee_query:
+    target_agents:
+      - EmployeeDataAgent
+
+  hybrid_query:
+    target_agents:
+      - PolicyRAGAgent
+      - EmployeeDataAgent
+
+audit:
+  enabled: true
+  required_fields:
+    - user_id
+    - username
+    - role
+    - raw_query
+    - query_type
+    - agents_used
+    - final_answer
+    - status
+    - processing_time_ms
