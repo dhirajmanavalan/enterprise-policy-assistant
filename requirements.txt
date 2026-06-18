@@ -1,0 +1,61 @@
+# AI ENTERPRISE POLICY ASSISTANT
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Mistral AI
+mistralai
+
+# LangChain - Agent & RAG Framework
+langchain
+langchain-community
+langchain-mistralai
+langgraph
+
+# Vector Database - ChromaDB (for RAG)
+chromadb
+
+# PDF & Document Loading
+pypdf
+pdfplumber
+python-docx
+
+# Text Splitting & Embeddings
+sentence-transformers
+tiktoken
+
+# Database - SQLite (Employee DB)
+sqlalchemy
+aiosqlite
+
+# Authentication & Security
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+
+# Data Validation - Pydantic
+pydantic
+pydantic-settings
+
+# HTTP Client
+httpx
+requests
+
+# Logging & Monitoring
+loguru
+rich
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+
+# Utilities
+python-dateutil
+pyyaml
+numpy
+pandas
+
+# MySQL Driver
+pymysql
+cryptography
