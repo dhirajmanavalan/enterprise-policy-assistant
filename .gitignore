@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# IDE Files
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Python Build Files
+build/
+dist/
+*.egg-info/
+
+# Test Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ChromaDB
+chroma_db/
+chroma/
+
+# Temporary Files
+temp/
+tmp/
