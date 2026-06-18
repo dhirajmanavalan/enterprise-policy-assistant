@@ -1,0 +1,53 @@
+INSURANCE POLICY 2026
+Company: Enterprise Corp
+Department: Human Resources
+Version: 2026.1
+
+1. HEALTH INSURANCE
+All permanent employees are covered under group health insurance from day 1 of joining.
+Coverage amount is Rs 5 lakhs per employee per year.
+Family floater option is available — spouse and up to 2 dependent children can be added.
+Additional family members such as parents can be added at employee cost with 50 percent premium sharing.
+Insurance coverage is active as long as the employee is on company rolls.
+
+2. WHAT IS COVERED UNDER HEALTH INSURANCE
+Hospitalization expenses including room rent, doctor fees, surgery, and medicines are covered.
+Pre-hospitalization expenses covered for 30 days before admission.
+Post-hospitalization expenses covered for 60 days after discharge.
+Day care procedures that do not require 24-hour hospitalization are fully covered.
+Maternity expenses including delivery and newborn care covered up to Rs 50000.
+Pre-existing diseases are covered after 2 years of continuous policy with company.
+Ambulance charges up to Rs 2000 per hospitalization are covered.
+
+3. INSURANCE CLAIM PROCESS
+For planned hospitalization inform HR and insurance company 3 days in advance for cashless treatment.
+For emergency hospitalization inform HR within 24 hours of admission.
+Cashless treatment facility is available at all network hospitals empanelled with insurer.
+For non-network hospitals pay first and claim reimbursement with original bills.
+Reimbursement claims must be submitted within 30 days of hospital discharge.
+Required documents: Original bills, discharge summary, doctor prescriptions, and diagnostic reports.
+Claims submitted after 30 days will be rejected by insurer.
+
+4. LIFE INSURANCE
+All permanent employees are covered under group term life insurance.
+Coverage amount is 3 times the annual CTC of the employee.
+Nominee details must be submitted to HR within 30 days of joining.
+In case of employee death coverage amount is paid to the registered nominee.
+Coverage automatically ends on the last working day of employment.
+Suicide and self-inflicted injury are not covered under life insurance.
+
+5. PERSONAL ACCIDENT INSURANCE
+Personal accident cover of Rs 10 lakhs for all employees.
+Covers accidental death and permanent total disability.
+Partial disability is covered proportionally as per the policy terms table.
+Accident during official travel is fully covered.
+Accident during personal travel is also covered under this policy.
+Claims must be submitted within 7 days of accident occurrence.
+
+6. INSURANCE ENROLLMENT AND CHANGES
+New employees must submit insurance enrollment form within 30 days of joining date.
+Late enrollment after 30 days will result in coverage starting from next renewal cycle.
+Family addition requests must be submitted within 30 days of marriage or childbirth.
+Changes to nominee details must be submitted in writing to HR department.
+Annual policy renewal happens on April 1st every year.
+Employees must verify their coverage details every year during renewal.

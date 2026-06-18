@@ -1,0 +1,47 @@
+WORK FROM HOME POLICY 2026
+Company: Enterprise Corp
+Department: Human Resources
+Version: 2026.1
+
+1. ELIGIBILITY FOR WFH
+All permanent employees who have completed 6 months of service are eligible for WFH.
+Probationary employees during their first 6 months are not eligible for WFH.
+Contract and temporary employees require special written approval for WFH.
+Employees with active performance improvement plans are not eligible for WFH.
+
+2. WFH DAYS ALLOWED
+Employees are allowed maximum 2 WFH days per week.
+WFH days cannot be on Monday or Friday without special manager approval.
+WFH is not permitted on days with mandatory all-hands or team meetings.
+Maximum 8 WFH days per month are allowed per employee.
+WFH cannot be taken on consecutive weeks for more than 4 days total.
+
+3. WFH APPROVAL PROCESS
+WFH request must be submitted through the HR portal under WFH section.
+Request must be submitted minimum 1 day in advance for planned WFH.
+Manager approval is required before the WFH day begins.
+Emergency WFH due to unforeseen circumstances can be approved on the same day by manager via message.
+WFH without approval will be marked as absent.
+
+4. WORK EXPECTATIONS DURING WFH
+Employee must be available on all communication channels during work hours.
+Work hours remain 9 AM to 6 PM during WFH same as office hours.
+Employee must attend all scheduled video calls and team meetings with camera on.
+Deliverables and productivity standards remain exactly the same as office work.
+Response time to messages and emails must be within 30 minutes during work hours.
+Lunch break is from 1 PM to 2 PM only during WFH.
+
+5. EQUIPMENT AND CONNECTIVITY
+Company will not provide additional equipment or devices for WFH purpose.
+Employee is fully responsible for stable and reliable internet connectivity.
+VPN must be used at all times for accessing company systems from home.
+Any data security breach or policy violation during WFH is the employee responsibility.
+Company laptop must be used for all official work during WFH.
+Personal devices must not be used for accessing company confidential data.
+
+6. WFH REVOCATION AND PENALTIES
+Manager can revoke WFH privileges immediately if productivity is impacted.
+Repeated WFH violations will result in permanent WFH access removal.
+HR has the right to review, audit, and cancel WFH arrangements at any time.
+Misuse of WFH policy will lead to disciplinary action.
+Three violations in a quarter will result in WFH suspension for that quarter.

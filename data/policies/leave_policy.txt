@@ -1,0 +1,55 @@
+LEAVE POLICY 2026
+Company: Enterprise Corp
+Department: Human Resources
+Version: 2026.1
+
+1. CASUAL LEAVE
+Every employee is entitled to 12 casual leaves per calendar year.
+Casual leave cannot be carried forward to the next year.
+Casual leave can be taken for personal emergencies and personal work.
+Maximum 3 consecutive casual leaves can be taken at one time.
+Prior approval from manager is required for planned casual leaves.
+Casual leave balance will be reset to 12 at the start of every year.
+
+2. SICK LEAVE
+Every employee is entitled to 10 sick leaves per calendar year.
+Sick leave can be taken when the employee is unwell or injured.
+For sick leave more than 3 consecutive days, a medical certificate is required.
+Sick leave cannot be carried forward to the next year.
+Unused sick leave will lapse at the end of the calendar year.
+Sick leave cannot be combined with casual leave without HR approval.
+
+3. EARNED LEAVE
+Every employee is entitled to 15 earned leaves per calendar year.
+Earned leave is accrued at 1.25 days per month of service.
+Earned leave can be carried forward up to a maximum of 30 days.
+Minimum 5 earned leaves must be taken in a year.
+Earned leave encashment is allowed up to 10 days per year.
+Employees with more than 30 carried forward leaves will lose the excess.
+
+4. LEAVE APPLICATION PROCESS
+All leave requests must be submitted through the HR portal.
+Casual leave must be applied minimum 1 day in advance.
+Earned leave must be applied minimum 7 days in advance.
+Emergency sick leave can be informed on the same day before 10 AM.
+Manager approval is mandatory for all leave types.
+Leave without manager approval will be treated as unauthorized absence.
+
+5. LEAVE WITHOUT PAY
+If all leaves are exhausted, additional leaves will be treated as Leave Without Pay.
+Leave Without Pay requires HR Manager approval.
+Salary will be deducted proportionally for LWP days.
+Excessive LWP may impact annual performance review.
+
+6. MATERNITY AND PATERNITY LEAVE
+Female employees are entitled to 26 weeks of paid maternity leave.
+Male employees are entitled to 5 days of paid paternity leave.
+Maternity and paternity leave are fully paid and do not impact other leave balances.
+Application must be submitted to HR at least 4 weeks before expected date.
+Maternity leave can be extended by 4 weeks unpaid with medical recommendation.
+
+7. LEAVE ENCASHMENT
+Earned leave encashment is allowed at the time of resignation or retirement.
+Maximum 30 days of earned leave can be encashed.
+Encashment amount is calculated based on basic salary per day.
+Casual and sick leave cannot be encashed.
