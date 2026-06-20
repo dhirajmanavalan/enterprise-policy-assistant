@@ -12,27 +12,56 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
+# SESSION STATE
+# ---------------------------------------------------
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if "user" not in st.session_state:
+    st.session_state.user = None
+
+# ---------------------------------------------------
 # CUSTOM CSS
 # ---------------------------------------------------
 
 st.markdown("""
 <style>
 
-.main {
-    padding-top: 1rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Poppins', sans-serif;
 }
 
-.block-container {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+.stApp {
+    background-color: #0F172A;
 }
 
 [data-testid="stSidebar"] {
-    background-color: #1E1E2F;
+    background-color: #1E293B;
 }
 
-h1 {
-    text-align: center;
+.stButton button {
+    background: linear-gradient(90deg,#2563EB,#7C3AED);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.profile-card {
+    background:#1E293B;
+    padding:20px;
+    border-radius:15px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.metric-box {
+    background:#1E293B;
+    padding:15px;
+    border-radius:10px;
 }
 
 </style>
@@ -44,62 +73,169 @@ h1 {
 
 with st.sidebar:
 
-    st.title("🔐 Login")
+    st.title("🔐 Employee Login")
 
-    username = st.text_input(
-        "Username"
-    )
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
 
-    password = st.text_input(
-        "Password",
-        type="password"
-    )
+    if not st.session_state.logged_in:
 
-    st.markdown("---")
+        if st.button("Login", use_container_width=True):
 
-    st.subheader("💡 Sample Queries")
+            try:
 
-    sample_queries = [
-        "Show my profile",
-        "Show my leave balance",
-        "How many earned leave do I have left?",
-        "Show my leave requests",
-        "I want sick leave from 2026-06-19 to 2026-06-22",
-        "What is the leave carry forward policy?",
-        "Approve leave request 15",
-        "Reject leave request 15",
-        "What is the leave carry forward policy and show my profile"
-    ]
+                orchestrator = EnterpriseAssistantOrchestrator()
 
-    for query_hint in sample_queries:
-        st.code(query_hint)
+                auth_result = (
+                    orchestrator.authentication_agent.authenticate(
+                        username,
+                        password
+                    )
+                )
 
-    st.markdown("---")
+                if auth_result.get("authenticated"):
 
-    st.subheader("⚙️ Available Features")
+                    st.session_state.logged_in = True
+                    st.session_state.user = auth_result["user"]
 
-    st.markdown("""
-    - Employee Profile
-    - Leave Balance
-    - Leave Requests
-    - Leave Approval
-    - Leave Rejection
-    - Company Policies
-    - Hybrid Queries
-    - Audit Tracking
-    """)
+                    st.success("Login Successful")
+                    st.rerun()
+
+                else:
+                    st.error("Invalid Username or Password")
+
+            except Exception as e:
+                st.error(str(e))
+
+    if st.session_state.logged_in:
+
+        st.success(
+            f"Logged in as {st.session_state.user['username']}"
+        )
+
+        if st.button("Logout", use_container_width=True):
+
+            st.session_state.logged_in = False
+            st.session_state.user = None
+
+            st.rerun()
+
+        st.markdown("---")
+
+        if st.checkbox("Show Sample Queries"):
+
+            sample_queries = [
+                "Show my profile",
+                "Show my leave balance",
+                "How many earned leave do I have left?",
+                "Show my leave requests",
+                "I want sick leave from 2026-06-19 to 2026-06-22",
+                "What is the leave carry forward policy?",
+                "Approve leave request 15",
+                "Reject leave request 15",
+                "What is the leave carry forward policy and show my profile"
+            ]
+
+            for query_hint in sample_queries:
+                st.code(query_hint)
+
+        st.markdown("---")
+
+        st.subheader("⚙️ Features")
+
+        st.markdown("""
+        - Employee Profile
+        - Leave Balance
+        - Leave Requests
+        - Leave Approval
+        - Leave Rejection
+        - Company Policies
+        - Hybrid Queries
+        - Audit Tracking
+        """)
 
 # ---------------------------------------------------
 # HEADER
 # ---------------------------------------------------
 
-st.title("🏢 Enterprise Policy Assistant")
+st.markdown("""
+<div style="
+background:linear-gradient(90deg,#2563EB,#7C3AED);
+padding:25px;
+border-radius:15px;
+text-align:center;
+color:white;
+margin-bottom:20px;
+">
+<h1>🏢 Enterprise Policy Assistant</h1>
+<p>AI Powered HR & Policy Management Platform</p>
+</div>
+""", unsafe_allow_html=True)
 
-st.markdown(
-    "Ask policy, leave, employee, or HR-related questions."
-)
+# ---------------------------------------------------
+# DASHBOARD CARDS
+# ---------------------------------------------------
 
-st.markdown("---")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Policies", "4")
+
+with col2:
+    st.metric("Agents", "7")
+
+with col3:
+    st.metric("Status", "🟢 Active")
+
+# ---------------------------------------------------
+# LOGIN REQUIRED
+# ---------------------------------------------------
+
+if not st.session_state.logged_in:
+
+    st.info(
+        "Please login using your employee credentials to continue."
+    )
+
+    st.stop()
+
+# ---------------------------------------------------
+# USER PROFILE
+# ---------------------------------------------------
+
+user = st.session_state.user
+
+st.markdown(f"""
+<div class="profile-card">
+<h3>👤 {user.get('full_name','N/A')}</h3>
+<p><b>Role:</b> {user.get('role','N/A').title()}</p>
+<p><b>Department:</b> {user.get('department','N/A')}</p>
+<p><b>Employee ID:</b> {user.get('employee_id','N/A')}</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------------------------------------
+# AGENT FLOW
+# ---------------------------------------------------
+
+st.subheader("🤖 Multi-Agent Workflow")
+
+graph = """
+digraph {
+Authentication -> QueryRouter
+QueryRouter -> PolicyRAG
+QueryRouter -> EmployeeData
+QueryRouter -> LeaveRequest
+QueryRouter -> LeaveApproval
+PolicyRAG -> Response
+EmployeeData -> Response
+LeaveRequest -> Response
+LeaveApproval -> Response
+Response -> Audit
+}
+"""
+
+st.graphviz_chart(graph)
 
 # ---------------------------------------------------
 # QUERY INPUT
@@ -107,20 +243,19 @@ st.markdown("---")
 
 query = st.text_area(
     "💬 Ask your question",
-    height=120
+    height=120,
+    placeholder="Ask about policies, leave, employee details..."
 )
 
 # ---------------------------------------------------
-# SUBMIT BUTTON
+# SUBMIT
 # ---------------------------------------------------
 
-if st.button("🚀 Submit", use_container_width=True):
+if st.button("🚀 Submit Request", use_container_width=True):
 
-    if not username or not password or not query:
+    if not query:
 
-        st.warning(
-            "Please enter username, password, and query."
-        )
+        st.warning("Please enter a query.")
 
     else:
 
@@ -135,7 +270,7 @@ if st.button("🚀 Submit", use_container_width=True):
             )
 
         # -------------------------------------------
-        # SUCCESS / ERROR
+        # STATUS
         # -------------------------------------------
 
         if result.get("status") == "success":
@@ -165,41 +300,39 @@ if st.button("🚀 Submit", use_container_width=True):
 
             st.subheader("👤 Employee Information")
 
-            col1, col2, col3, col4 = st.columns(4)
+            c1, c2, c3, c4 = st.columns(4)
 
-            with col1:
+            with c1:
                 st.metric(
                     "Employee ID",
                     user.get("employee_id")
                 )
 
-            with col2:
+            with c2:
                 st.metric(
                     "Role",
                     user.get("role", "").title()
                 )
 
-            with col3:
+            with c3:
                 st.metric(
                     "Department",
                     user.get("department")
                 )
 
-            with col4:
+            with c4:
                 st.metric(
                     "Username",
                     user.get("username")
                 )
 
-            st.info(
-                f"""
+            st.info(f"""
 **Full Name:** {user.get('full_name', 'N/A')}
 
 **Designation:** {user.get('designation', 'N/A')}
 
 **Email:** {user.get('email', 'N/A')}
-"""
-            )
+""")
 
         st.markdown("---")
 
@@ -209,14 +342,14 @@ if st.button("🚀 Submit", use_container_width=True):
 
         st.subheader("🤖 Query Details")
 
-        col1, col2 = st.columns(2)
+        c1, c2 = st.columns(2)
 
-        with col1:
+        with c1:
             st.info(
                 f"**Query Type:** {result.get('query_type')}"
             )
 
-        with col2:
+        with c2:
             st.info(
                 f"**Target Agents:** {result.get('target_agents')}"
             )
@@ -258,16 +391,26 @@ if st.button("🚀 Submit", use_container_width=True):
 
             audit = result["audit_result"]
 
-            col1, col2 = st.columns(2)
+            c1, c2 = st.columns(2)
 
-            with col1:
+            with c1:
                 st.metric(
                     "Audit Log ID",
                     audit.get("audit_log_id")
                 )
 
-            with col2:
+            with c2:
                 st.metric(
                     "Query ID",
                     audit.get("query_id")
                 )
+
+# ---------------------------------------------------
+# FOOTER
+# ---------------------------------------------------
+
+st.markdown("---")
+
+st.caption(
+    "Enterprise Policy Assistant • Multi-Agent AI Platform • Version 1.0"
+)
