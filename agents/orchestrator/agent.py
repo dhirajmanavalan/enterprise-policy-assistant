@@ -1,5 +1,5 @@
 # MAIN ORCHESTRATOR
-# Connects all agents in one complete flow
+# Here I am connecting all agents in one complete flow
 import time
 
 from agents.specialists.authentication_agent import AuthenticationAgent

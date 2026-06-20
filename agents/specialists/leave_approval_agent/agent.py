@@ -15,7 +15,7 @@ class LeaveApprovalAgent:
 
         role = authenticated_user.get("role", "").lower()
 
-        # Only HR, Manager, Admin can approve/reject
+        # here im implementing conditions for HR, Manager, Admin can approve/reject
         if role not in ["hr", "manager", "admin"]:
             return {
                 "agent": self.agent_name,
@@ -70,9 +70,7 @@ class LeaveApprovalAgent:
 
             query_lower = user_query.lower()
 
-            # =====================
             # REJECT FLOW
-            # =====================
             if "reject" in query_lower:
 
                 leave_request.status = "rejected"
@@ -97,9 +95,7 @@ class LeaveApprovalAgent:
                     "approved_by_id": approver_id
                 }
 
-            # =====================
             # APPROVE FLOW
-            # =====================
 
             leave_request.status = "approved"
             leave_request.approved_by = approver_id

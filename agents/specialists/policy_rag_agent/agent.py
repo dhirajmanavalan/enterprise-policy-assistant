@@ -1,5 +1,5 @@
-# Handles policy-related user questions
-# using the RAG pipeline
+# Handles policy-related user questions.
+# using the RAG pipeline.
 
 from rag.pipeline import query_rag
 from shared.logger import logger

@@ -1,5 +1,5 @@
-#In multi-agent projects, a file like policies.
-#yaml is usually used to define system rules or orchestration policies,
+#In multi-agent projects, a file like policies
+#yaml is usually used to define system rules or orchestration policies.
 access_control:
   employee:
     can_view_self_data: true

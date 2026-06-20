@@ -1,4 +1,4 @@
-# Retrieves employee-specific data from DB
+# Here Retrieving employee-specific data from DB
 
 from db.session import SessionLocal
 from db.employee_repository import (

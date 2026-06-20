@@ -1,5 +1,5 @@
-# Real DB-based authentication
-# Verifies username, password, role, and user profile
+# Real DB-based authentication.
+# Verifies username, password, role, and user profile.
 
 from db.session import SessionLocal
 from db.models import User

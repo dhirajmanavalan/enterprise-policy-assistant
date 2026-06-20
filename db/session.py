@@ -8,7 +8,7 @@ from shared.config import settings
 from shared.logger import logger
 
 
-# Create Database Engine - actual MySQL connection
+# i am Create Database Engine - actual MySQL connection
 engine = create_engine(
     settings.database_url,
     pool_pre_ping=True,
@@ -16,7 +16,7 @@ engine = create_engine(
     echo=False
 )
 
-# Session Factory
+# this is the session Factory
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
