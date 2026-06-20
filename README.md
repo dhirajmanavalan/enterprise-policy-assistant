@@ -6,6 +6,24 @@ The system combines Multi-Agent Architecture, Retrieval-Augmented Generation (RA
 
 ---
 
+# 🌐 Live Demo
+
+🚀 Live Application:
+
+https://enterprise-policy-assistant-production.up.railway.app/
+
+---
+
+# 🎥 Project Demo Video
+
+Watch the complete project walkthrough, including authentication, leave management, policy retrieval, approval workflows, and Multi-Agent orchestration:
+
+🎬 Demo Recording:
+
+https://drive.google.com/file/d/1WOIXtYQPRQL2PBUEOX1B2A6dA1IgycFV/view?usp=sharing
+
+---
+
 ## 🚀 Features
 
 ### 👤 Employee Services
@@ -256,12 +274,13 @@ Response
 
 - ChromaDB
 - Sentence Transformers
-- Mistral LLM
+- Mistral AI
+- Retrieval-Augmented Generation (RAG)
 
 ## Security
 
 - bcrypt
-- RBAC
+- Role-Based Access Control (RBAC)
 
 ## Logging
 
@@ -306,12 +325,10 @@ enterprise-policy-assistant/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/enterprise-policy-assistant.git
+git clone https://github.com/dhirajmanavalan/enterprise-policy-assistant.git
 
 cd enterprise-policy-assistant
 ```
-
----
 
 ## Create Virtual Environment
 
@@ -319,21 +336,17 @@ cd enterprise-policy-assistant
 python -m venv .venv
 ```
 
-Activate:
+Activate Environment:
 
 ```bash
 .venv\Scripts\activate
 ```
-
----
 
 ## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-
----
 
 ## Configure Database
 
@@ -342,8 +355,6 @@ Update database credentials in:
 ```text
 db/session.py
 ```
-
----
 
 ## Run Application
 
@@ -393,15 +404,11 @@ How many earned leave do I have left?
 Show my leave requests
 ```
 
----
-
 ## Leave Request Queries
 
 ```text
 I want sick leave from 2026-06-19 to 2026-06-22
 ```
-
----
 
 ## Policy Queries
 
@@ -413,8 +420,6 @@ What is the reimbursement policy?
 What is the work from home policy?
 ```
 
----
-
 ## Approval Queries
 
 ```text
@@ -422,8 +427,6 @@ Approve leave request 15
 
 Reject leave request 15
 ```
-
----
 
 ## Hybrid Query
 
@@ -438,8 +441,8 @@ What is the leave carry forward policy and show my profile
 | Role | Permissions |
 |--------|-------------|
 | Employee | View Profile, Leave Balance, Apply Leave |
-| HR | Approve/Reject Leave, Employee Data |
-| Manager | Approve/Reject Leave |
+| Manager | Approve / Reject Leave |
+| HR | Approve / Reject Leave, Employee Data Access |
 | Admin | Full Access |
 
 ---
@@ -466,6 +469,8 @@ What is the leave carry forward policy and show my profile
 
 ✅ ChromaDB Vector Database
 
+✅ Semantic Policy Search
+
 ✅ Leave Management Workflow
 
 ✅ Role-Based Access Control
@@ -476,14 +481,36 @@ What is the leave carry forward policy and show my profile
 
 ✅ Enterprise Use Case
 
+✅ Live Cloud Deployment on Railway
+
+✅ End-to-End Project Demonstration Video
+
 ---
 
-## Author
+# 🔗 Project Links
 
-**Dhiraj Kumar M**
+### 🌐 Live Demo
 
-Aspiring Full Stack Java Developer | AI & Data Science Graduate
+https://enterprise-policy-assistant-production.up.railway.app/
 
-GitHub: https://github.com/dhirajmanavalan
+### 🎥 Project Demo Video
 
-LinkedIn: https://www.linkedin.com/in/dhirajkumar-/
+https://drive.google.com/file/d/1WOIXtYQPRQL2PBUEOX1B2A6dA1IgycFV/view?usp=sharing
+
+### 💻 GitHub Repository
+
+https://github.com/dhirajmanavalan/enterprise-policy-assistant
+
+---
+
+## 👨‍💻 Author
+
+### Dhiraj Kumar M
+
+AI & Data Science Graduate | Software Developer
+
+🔗 LinkedIn:
+https://www.linkedin.com/in/dhirajkumar-/
+
+🔗 GitHub:
+https://github.com/dhirajmanavalan
