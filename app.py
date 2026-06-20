@@ -68,6 +68,21 @@ html, body, [class*="css"] {
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
+with st.expander("🎯 Demo Credentials"):
+
+    st.code("""
+Employee
+Username: dhiru_offl
+Password: Dhi@123
+
+HR
+Username: nagendra.enukolu
+Password: Nagendra@123
+
+Manager
+Username: madhu.mitha
+Password: Madhu@123
+""")
 # SIDEBAR
 # ---------------------------------------------------
 
@@ -408,6 +423,45 @@ if st.button("🚀 Submit Request", use_container_width=True):
 # ---------------------------------------------------
 # FOOTER
 # ---------------------------------------------------
+st.markdown("---")
+
+st.markdown("""
+<div style="
+text-align:center;
+padding:20px;
+border-radius:10px;
+background-color:#1E293B;
+color:white;
+">
+
+<h4>🚀 Developed By</h4>
+
+<h3>DHIRAJKUMAR M</h3>
+
+<p>
+Software Developer | AI & Data Science Graduate
+</p>
+
+<p>
+🔗 GitHub:
+<a href="https://github.com/dhirajmanavalan/enterprise-policy-assistant" target="_blank">
+Enterprise Policy Assistant
+</a>
+</p>
+
+<p>
+💼 LinkedIn:
+<a href="https://www.linkedin.com/in/dhirajkumar-/" target="_blank">
+Dhiraj Kumar
+</a>
+</p>
+
+</div>
+""", unsafe_allow_html=True)
+
+st.info(
+    "This application uses demo employee and policy data for demonstration purposes."
+)
 
 st.markdown("---")
 
